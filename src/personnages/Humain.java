@@ -15,11 +15,11 @@ public class Humain {
 	
 	
 	public String getNom() {
-		return this.nom
+		return this.nom;
 	}
 	
 	public int getArgent() {
-		return this.wari
+		return this.wari;
 	}
 	
 	public void parler(String texte) {
@@ -34,8 +34,15 @@ public class Humain {
 		this.parler("Mmmm, un bon verre de "+this.boissonFav+" ! GLOUPS !");
 	}
 	
-	public void acheter(String bien, int prix) {
-		
+	public boolean acheter(String bien, int prix) {
+		if (prix <= this.wari) {
+			this.parler("J'ai "+this.wari+" sous en poche je vais pouvoir m'offrir "+bien+" à "+prix+" sous");
+			this.perdreArgent(prix);
+			return true;
+		} else {
+			this.parler("Je n'ai plus que "+this.wari+" sous en poche je ne peux meme pas m'offrir "+bien+" à "+prix+" sous");
+			return false;
+		}
 	}
 	
 	private void gagnerArgent(int gain) {
