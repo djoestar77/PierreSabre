@@ -29,5 +29,7 @@ public class HistoireTP4 {
 		
 		roro.direBonjour();
 		roro.donner(marco);
+		
+		roro.provoquer(yaku);
 	}
 }
