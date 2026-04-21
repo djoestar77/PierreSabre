@@ -22,7 +22,7 @@ public class Humain {
 		return this.wari;
 	}
 	
-	public void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println("("+this.nom+ ") - " + texte);
 	}
 	
@@ -45,11 +45,11 @@ public class Humain {
 		}
 	}
 	
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		this.wari += gain;
 	}
 	
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		this.wari -= perte;
 	}
 }
