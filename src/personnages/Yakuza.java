@@ -1,6 +1,5 @@
 package personnages;
 
-import personnages.Commercant;
 
 public class Yakuza extends Humain {
 	private String clan;
